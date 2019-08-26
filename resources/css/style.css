@@ -1,0 +1,514 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    /* mac dinh la 16*/
+    color: 5a5a5a;
+    background-color: white;
+    text-rendering: optimizeLegibility;
+}
+
+.logo {
+    width: 350px;
+    float: left;
+    margin-top: -50px;
+    margin-left: 50px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* --------------------------------------------------------
+------------------REUSABLE COMPONENT---------------------
+--------------------------------------------------------- */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    font-size: 320%;
+    font-weight: 700px;
+    word-spacing: 12px;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #e67e22;
+    padding: 10px 30px;
+    font-size: 110%;
+    width: 220px;
+    height: 45px;
+    display: inline-block;
+    text-align: center;
+    margin: 30px 30px 30px 0;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: red;
+}
+
+h2 {
+    color: orange;
+    font-size: 220%;
+    text-align: center;
+    word-spacing: 10px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 200px;
+    background-color: rgba(230, 126, 34, 0.3);
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+h3 {
+    background-color: #265077;
+    padding: 30px 0px 10px 0px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 70px;
+}
+
+.small-icon {
+    color: #265077;
+    font-size: 160%;
+}
+
+
+/* --------------------------------------------------------
+--------------------------HEADER--------------------------
+--------------------------------------------------------- */
+
+header {
+    background-attachment: fixed;
+    background-image: linear-gradient(45deg, rgba(2, 33, 64, 0.8) 55%, rgba(45, 95, 93, 0.85)), url(../img/background4.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.main-nav {
+    float: right;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline;
+    margin-right: 50px;
+    font-size: 120%;
+}
+
+.main-nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.heading-main-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%, -50%);
+    width: 1140px;
+}
+
+
+/* --------------------------------------------------------
+----------------------ABOUT SECTION------------------------
+--------------------------------------------------------- */
+
+.p-long {
+    text-align: center;
+    width: 80%;
+    color: #265077;
+    margin-left: 10%;
+    font-size: 120%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-picture img {
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 5px #888888;
+    border: #a6cef3 solid 3px;
+    transition: all 2s;
+}
+
+.about-picture {
+    position: relative;
+}
+
+.picture-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(134, 160, 236);
+    transform: translate(-63%, 100%);
+    opacity: 0;
+    transition: all 2s;
+}
+
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title {
+    transform: translate(-63%, -50%);
+    opacity: 1;
+}
+
+.about-picture:hover img,
+.about-picture:active img {
+    filter: blur(2px) brightness(55%);
+}
+
+
+/* --------------------------------------------------------
+----------------------PRODUCT SECTION------------------------
+--------------------------------------------------------- */
+
+.products-section {
+    background-color: #f4f4f4;
+}
+
+.product-box {
+    background-color: #eeefff;
+    width: 90%;
+    height: 360px;
+    box-shadow: 3px 5px 10px #e0e0e0;
+}
+
+.products-section h2 {
+    padding-bottom: 70px;
+}
+
+.product-box .btn {
+    margin-left: 20%;
+}
+
+.products-price {
+    color: #5484b1;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 185%;
+    text-align: center;
+    font-weight: 100;
+}
+
+.products-price span {
+    font-weight: 300;
+    font-size: 120%;
+}
+
+.product-box ul li {
+    list-style: none;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 20%;
+}
+
+
+/* --------------------------------------------------------
+----------------------TESTIMONIALS  SECTION------------------------
+--------------------------------------------------------- */
+
+.testimonials-section {
+    background-image: linear-gradient(45deg, rgba(2, 33, 64, 0.8) 55%, rgba(45, 95, 93, 0.85)), url(../img/background2.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+cite img {
+    width: 20%;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #5484b1;
+    margin-right: 10px;
+}
+
+cite {
+    display: block;
+    color: #82aed6;
+    word-spacing: 1.5px;
+    margin-top: 24px;
+}
+
+.testimonials-section h2 {
+    padding-bottom: 85px;
+}
+
+blockquote {
+    position: relative;
+    font-style: italic;
+    font-size: 110%;
+    line-height: 160%;
+    color: #ffffff;
+}
+
+blockquote::before {
+    content: "\201C";
+    display: block;
+    font-size: 330%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+
+/* --------------------------------------------------------
+----------------------SPONSORS SECTION------------------------
+--------------------------------------------------------- */
+
+.sponsors-section {
+    background-color: #f0ecec;
+}
+
+.sponsors-section h2 {
+    margin-bottom: 60px;
+}
+
+.sponsors-showcase li {
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+figure {
+    padding-bottom: 40px;
+}
+
+.sponsors-showcase {
+    color: #265077;
+    margin-left: 9%;
+}
+
+figcaption {
+    font-size: 128%;
+    font-weight: 900;
+    padding-top: 10px;
+}
+
+figure img {
+    width: 140px;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+figure img:hover {
+    transform: scale(1.2);
+}
+
+
+/* --------------------------------------------------------
+----------------------CONTACT SECTION------------------------
+--------------------------------------------------------- */
+
+.contact-section {
+    background-image: linear-gradient(45deg, rgba(2, 33, 64, 0.8) 55%, rgba(45, 95, 93, 0.85)), url(../img/background5.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.social-media li {
+    list-style: none;
+    font-size: 365%;
+    display: inline-block;
+    padding-right: 25px;
+    margin-top: 50px;
+    color: white;
+    transition: all .3s linear;
+}
+
+.social-media li:hover {
+    transform: scale(1.3);
+    color: rgb(221, 163, 54);
+}
+
+.infomation {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 115%;
+    margin-top: 80px;
+}
+
+.infomation li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.infomation .small-icon,
+.small-icon-location {
+    margin-right: 10px;
+    transition: all .3s;
+}
+
+.infomation .small-icon:hover,
+.small-icon-location:hover {
+    transform: scale(1.4);
+}
+
+.infomation .small-icon-location {
+    color: #265077;
+    font-size: 160%;
+    margin-left: 7px;
+}
+
+form {
+    background-color: rgba(0, 0, 0, .3);
+    margin-left: 40%;
+    width: 60%;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-size: 160%;
+}
+
+textarea,
+input {
+    background-color: rgba(48, 47, 47, .3);
+    border: rgba(211, 202, 202, 0.2) solid 2px;
+    padding: 10px;
+    width: 80%;
+    margin-left: 30px;
+    font-size: 100%;
+    outline: none;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input {
+    height: 50px;
+}
+
+form .row:last-child {
+    text-align: center;
+    margin-left: 30px;
+}
+
+input[type=submit] {
+    font-weight: 650;
+    font-size: 130%;
+    cursor: pointer;
+    width: 65%;
+}
+
+form .row {
+    margin-top: 25px;
+}
+
+input[type=text],
+input[type=email],
+textarea:focus {
+    color: white;
+    background-color: rgba(48, 47, 47, 0.6);
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    color: white;
+}
+
+
+/* --------------------------------------------------------
+----------------------FOOTER------------------------
+--------------------------------------------------------- */
+
+footer {
+    color: white;
+    background-color: #494848;
+    padding: 20px;
+    text-align: center;
+    font-size: 135%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+
+/* --------------------------------------------------------
+----------------------STICKY------------------------
+--------------------------------------------------------- */
+
+.sticky {
+    background-color: rgb(2, 33, 64, 0.6);
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    height: 11%;
+}
+
+.sticky .logo {
+    width: 19%;
+    margin-top: -3.5%;
+}
+
+.sticky .main-nav {
+    margin-top: 1.9%;
+}
+
+
+/* --------------------------------------------------------
+----------------------MOBILE NAVIGATION ICON------------------------
+--------------------------------------------------------- */
+
+.mobile-nav-icon {
+    font-size: 270%;
+    color: #5484b1;
+    position: relative;
+    top: 75px;
+    left: 70px;
+    display: none;
+}
